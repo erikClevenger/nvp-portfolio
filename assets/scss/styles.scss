@@ -1,0 +1,107 @@
+@import 'variables.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+h3 {
+  font-size: $section-title;
+  font-weight: $bold;
+  font-family: $fira-sans;
+  color: $text-black;
+}
+
+h4 {
+  font-size: $section-subtitle;
+  font-weight: $regular;
+  font-family: $fira-sans;
+  color: $primary;
+}
+
+h5 {
+  font-size: $subsection;
+  font-family: $fira-sans;
+  font-weight: $bold;
+  color: $primary;
+  margin-top: 0.5rem;
+  line-height: 1.75rem;
+}
+
+p {
+  font-size: $body;
+  font-family: $oxygen;
+  color: $text-black;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  font-size: $body;
+  font-family: $oxygen;
+  color: $text-black;
+}
+
+// CUSTOM NUMBERING STYLE
+ol {
+  list-style: none;
+  counter-reset: new-counter;
+}
+ol li {
+  counter-increment: new-counter;
+}
+ol li::before {
+  content: counter(new-counter) '. ';
+  color: $primary;
+  font-family: $fira-sans;
+  font-weight: $bold;
+  font-size: 1.25rem;
+}
+
+// CUSTOM BULLET STYLE
+ul li {
+  list-style: none;
+}
+ul li::before {
+  content: '';
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.25rem;
+  transform: translateY(20%);
+  background-image: url('~assets/bullet.svg');
+  background-repeat: no-repeat;
+}
+
+// .container {
+//   margin: 0 auto;
+//   width: 100vw;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+.hero {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-family: $fira-sans;
+  // display: block;
+  // font-weight: $bold;
+  // font-size: $large-heading;
+}
+.subtitle {
+  font-family: $fira-sans;
+  font-weight: $regular;
+  font-size: $large-subheading;
+  display: block;
+}

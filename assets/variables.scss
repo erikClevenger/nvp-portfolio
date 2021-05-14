@@ -1,0 +1,17 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+$body-font-family: 'Oxygen';
+$heading-font-family: 'Fira Sans';
+
+$headings: (
+  'h1': (
+    'size': 4rem,
+    'weight': 700,
+  ),
+);
+
+$shades: (
+  'black': #282d2f,
+  'white': #f2f8fa,
+);
+
+@import '~vuetify/src/styles/styles.sass';
